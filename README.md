@@ -1,5 +1,7 @@
 # Ops-Programming-and-Database-Lab
 
+# Link to my app: http://34.253.194.39:5000/
+
 # Flask + MySQL App in Docker on AWS EC2
 
 This project runs a Flask web application inside a Docker container on an AWS EC2 instance. The application connects to a MySQL-compatible Amazon RDS database using **PyMySQL**.
