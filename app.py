@@ -1,9 +1,11 @@
+# Python modules used
 from flask import Flask, jsonify
 import pymysql
 
 app = Flask(__name__)
 
 # Database connection parameters
+# These are just examples
 DB_CONFIG = {
     "host": "lab44-sql.cxqmk4ysm6t6.eu-west-1.rds.amazonaws.com",
     "user": "admin",
@@ -23,6 +25,7 @@ def get_db_connection():
     return connection
 
 
+# Endpoint to the homepage which gives the other queries to use
 @app.route("/")
 def welcome():
     message = """The list of API's to use are:
@@ -35,6 +38,7 @@ def welcome():
     return f"<pre>{message}</pre>"
 
 
+# Querries used are placed in the api endpoints
 # API endpoint: Top Customers by Spending
 @app.route("/top_customers", methods=["GET"])
 def top_customers():
@@ -186,5 +190,6 @@ def frequent_buyers():
     return jsonify(results)
 
 
+# Host 0.0.0.0 is used which allows connection directly using the public instance id
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)

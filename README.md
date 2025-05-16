@@ -60,7 +60,7 @@ Once the container is running, open:
 http://<34.253.194.39>:5000/
 ```
 
-You should see the Flask app running, and if the database is reachable, any related functionality should work as expected.
+### Querry the database with on the web browser with the endpoints provided on the homepage
 
 🛡️ Security Checklist
 
