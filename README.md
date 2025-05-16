@@ -5,6 +5,7 @@
 # Flask + MySQL App in Docker on AWS EC2
 
 This project runs a Flask web application inside a Docker container on an AWS EC2 instance. The application connects to a MySQL-compatible Amazon RDS database using **PyMySQL**.
+The ec2 intance is already linked to the RDS instance
 
 ---
 
@@ -27,7 +28,7 @@ This project runs a Flask web application inside a Docker container on an AWS EC
 1. Connect to the EC2 Instance
 
 ```bash
-ssh ec2-user@<your-ec2-public-ip>
+ssh -i ec2-user@<34.253.194.39 >
 ```
 
 2. Clone the Repository
@@ -56,7 +57,7 @@ sudo docker run -d -p 5000:5000 flasksql
 Once the container is running, open:
 
 ```
-http://<your-ec2-public-ip>:5000
+http://<34.253.194.39>:5000/
 ```
 
 You should see the Flask app running, and if the database is reachable, any related functionality should work as expected.
